@@ -8,9 +8,9 @@ document.addEventListener("DOMContentLoaded", () => {
     document.getElementById("task-form").addEventListener("submit", (e) => {
         e.preventDefault();
         const taskInput = document.getElementById("task-input");
-        if(taskInput !== "") {
+        if(taskInput.value !== "") {
             // Agregamos la tarea 
-            addTask(taskInput);
+            addTask(taskInput.value);
             // Volvemos a cargar la lista de tareas
             renderTasks();
             // Limpiar el input

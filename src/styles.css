@@ -55,7 +55,7 @@ li {
     align-items: center;
 }
 /*Estilos para el elemento completaod de la lista*/
-li. completed {
+li.completed {
     text-decoration: line-through;
     color: #888;
 }

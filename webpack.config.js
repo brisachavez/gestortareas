@@ -17,7 +17,7 @@ module.exports = {
                 exclude: /node_modules/, // Excluir la carpeta node_modules 
                 use: {
                     loader: 'babel-loader', // Loader para convertir JS moderno al JS compatible a mas navegadores 
-                    optiones: {
+                    options: {
                         presets: ['@babel/preset-env'], 
                     }, 
                 },
