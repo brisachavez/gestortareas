@@ -8,10 +8,11 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
+    background-image: radial-gradient(circle, #a7d3a6, #add7a3, #b3dba1, #bbdf9d, #c3e39a, #cae597, #d1e793, #d8e990, #dfeb8c, #e7ec88, #efee85, #f7ef81);
 }
 /* Estilos para contenedor principal*/
 #app {
-    background-color: white;
+    background-color: #ADD2C2;
     padding: 20px;
     border-radius: 5px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
