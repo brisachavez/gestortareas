@@ -50,6 +50,7 @@ var updateTask = function updateTask(id) {
     }
     return task;
   });
+  localStorage.setItem('tasks', JSON.stringify(tasks));
 };
 
 /***/ }),
@@ -164,6 +165,19 @@ document.addEventListener("DOMContentLoaded", function () {
       (0,_ui__WEBPACK_IMPORTED_MODULE_0__.renderTasks)();
       // Limpiar el input
       document.getElementById("task-input").value = "";
+    }
+  });
+  // Agregar el evento para los botones 
+  document.getElementById("task-list").addEventListener("click", function (e) {
+    if (e.target.classList.contains("delete")) {
+      var taskId = e.target.parentElement.getAttribute("data-id");
+      (0,_task__WEBPACK_IMPORTED_MODULE_1__.deleteTask)(taskId);
+      (0,_ui__WEBPACK_IMPORTED_MODULE_0__.renderTasks)();
+    }
+    if (e.target.classList.contains("toggle")) {
+      var _taskId = e.target.parentElement.getAttribute("data-id");
+      (0,_task__WEBPACK_IMPORTED_MODULE_1__.updateTask)(_taskId);
+      (0,_ui__WEBPACK_IMPORTED_MODULE_0__.renderTasks)();
     }
   });
 });

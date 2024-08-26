@@ -29,4 +29,5 @@ export const updateTask = (id) => {
         }
         return task;
     });
+    localStorage.setItem('tasks', JSON.stringify(tasks));
 };
